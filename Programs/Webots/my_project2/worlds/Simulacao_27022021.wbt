@@ -1,0 +1,41 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.6931032800836722 0.6931032800836722 0.1980295085953349 0.75
+  position 0.9879483066421768 1.3520948164706246 1.938704791704733
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+E-puck {
+  translation 0.30000000000000004 0 0.30000000000000004
+  name "e-puck(3)"
+  controller "my_controllerteste"
+  camera_fieldOfView 0.94
+  camera_width 520
+  camera_height 390
+  battery [
+    0
+  ]
+}
+E-puck {
+  translation 0.2 0 0.2
+  name "e-puck(2)"
+  controller "my_controllerteste"
+  battery [
+    0
+  ]
+}
+E-puck {
+  translation 0.1 0 0.1
+  name "e-puck(1)"
+  controller "my_controllerteste"
+  battery [
+    0
+  ]
+}

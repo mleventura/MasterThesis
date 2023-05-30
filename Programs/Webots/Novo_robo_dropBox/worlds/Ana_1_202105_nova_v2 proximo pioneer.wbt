@@ -1,0 +1,172 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.0023737384591106434 0.8864369910110836 0.46284319843003374 3.1597777405166854
+  position 0.06507265049265276 5.167024275540762 -3.631727330674968
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  wallHeight 0.3
+}
+Robot {
+  translation -1.5 0.2 -1.5
+  rotation 0.9999999999999999 0 0 0
+  children [
+    Camera {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Compass {
+    }
+    Gyro {
+    }
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry DEF BODY Box {
+        size 0.495 0.12 0.508
+      }
+    }
+    DEF JOINT3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983420862
+        anchor 0.2675 -0.07 -0.14
+      }
+      device [
+        RotationalMotor {
+          name "motor_3"
+        }
+      ]
+      endPoint DEF WHEEL_3 Solid {
+        translation 0.2675 -0.07 -0.14
+        rotation -0.5307180837954775 0.5307200332354314 -0.6608135605865236 4.309468273087369
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.11
+            }
+          }
+        ]
+        name "WHEEL_3"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+          density 913
+        }
+      }
+    }
+    DEF JOINT4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983420862
+        anchor 0.2675 -0.07 0.14
+      }
+      device [
+        RotationalMotor {
+          name "motor_4"
+        }
+      ]
+      endPoint DEF WHEEL_4 Solid {
+        translation 0.2675 -0.07 0.14
+        rotation -0.5307180837954775 0.5307200332354314 -0.6608135605865236 4.309468273087369
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.11
+            }
+          }
+        ]
+        name "WHEEL_4"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+          density 913
+        }
+      }
+    }
+    DEF JOINT1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983420862
+        anchor -0.2675 -0.07 0.14
+      }
+      device [
+        RotationalMotor {
+          name "motor_1"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation -0.2675 -0.07 0.14
+        rotation -0.5307180837954775 0.5307200332354314 -0.6608135605865236 4.309468273087369
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.11
+            }
+          }
+        ]
+        name "WHEEL_4(1)"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+          density 913
+        }
+      }
+    }
+    DEF JOINT2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983420862
+        anchor -0.2675 -0.07 -0.14
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+        }
+      ]
+      endPoint DEF WHEEL_2 Solid {
+        translation -0.2675 -0.07 -0.14
+        rotation -0.5307180837954775 0.5307200332354314 -0.6608135605865236 4.309468273087369
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.11
+            }
+          }
+        ]
+        name "WHEEL_2(1)"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+          density 913
+        }
+      }
+    }
+  ]
+  contactMaterial "Aluminium"
+  boundingObject USE BODY
+  physics Physics {
+    density 2600
+  }
+  controller "my_controller_ANA_TESTE2"
+  battery [
+    311040, 311040, 5000
+  ]
+}

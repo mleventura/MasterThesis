@@ -1,0 +1,163 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.09991534132142624 0.9895637564799827 0.10382916945564159 4.704851624043367
+  position -4.015925252825934 0.7579340035316383 0.09071237647929942
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  wallHeight 0.01
+}
+Robot {
+  translation 7.986176932781531e-10 0.02977768619573334 0.2290941346566555
+  rotation 0.9248107423072647 -0.37865411203278193 0.036689976202656606 -9.336272583462388e-08
+  children [
+    Camera {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Compass {
+    }
+    Gyro {
+    }
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry DEF BODY Box {
+        size 0.1 0.05 0.2
+      }
+    }
+    DEF JOINT1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983426712
+        anchor 0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "motor_1"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation 0.06 0 0.05
+        rotation -0.5307180837968661 0.5307200332368203 -0.6608135605842931 4.3094682730842635
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.03
+            }
+          }
+        ]
+        name "WHEEL_1"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+        }
+      }
+    }
+    DEF JOINT3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983538612
+        anchor -0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "motor_3"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation -0.06 0 0.05
+        rotation -0.5307180838233719 0.5307200332633264 -0.6608135605417177 4.309468273024994
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.03
+            }
+          }
+        ]
+        name "WHEEL_1(2)"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+        }
+      }
+    }
+    DEF JOINT2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983420862
+        anchor 0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation 0.06 0 -0.05
+        rotation -0.5307180837954775 0.5307200332354314 -0.6608135605865236 4.309468273087369
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.03
+            }
+          }
+        ]
+        name "WHEEL_1(1)"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+        }
+      }
+    }
+    DEF JOINT4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 7.636479983532764
+        anchor -0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "motor_4"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation -0.06 0 -0.05
+        rotation -0.5307180838219842 0.5307200332619382 -0.660813560543947 4.309468273028097
+        children [
+          DEF FORMA_RODA Shape {
+            appearance DEF COR_RODA PBRAppearance {
+              baseColor 1 0.1 1
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.03
+            }
+          }
+        ]
+        name "WHEEL_1(3)"
+        boundingObject USE FORMA_RODA
+        physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "my_controller_ANA_TESTE"
+}
